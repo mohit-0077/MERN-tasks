@@ -1,0 +1,106 @@
+#mainHeading
+{
+    text-align: center; background-color: rgb(53, 223, 14);
+}
+
+.left-heading {
+    text-align: left;
+}
+
+.right-heading {
+    text-align: center;/* Float the right heading to the right side */
+}
+
+/* Reset some default styles for the list */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    float: left;
+    margin: 100 auto; /* Center-align the container */
+}
+
+/* Style the navbar */
+.navbar.vertical {
+    background-color: #0bc7e4; /* Background color of the navbar */
+    width: 200px; /* Adjust the width as needed */
+    height: 100%; /* Make the navbar full height of the viewport */
+    border: 6px solid white;
+    outline: 2px solid black;
+}
+
+/* Style the list items */
+.navbar.vertical ul li {
+    text-align: left;
+}
+
+/* Style the links */
+.navbar.vertical ul li a {
+    display: inline-flex; /* Make the entire list item clickable */
+    padding: 10px;
+    padding-left: 10px;
+    color: #041453; /* Text color of the links */
+    text-decoration: dashed; /* Remove underlines from links */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Change background color on hover */
+.navbar.vertical ul li:hover {
+    background-color: #dec208; /* Background color on hover */
+}
+
+/*  */
+/*  */
+
+/* Style the navbar */
+.navbar.horizontal {
+    background-color:darkgrey; /* Background color of the navbar */
+    border: 6px solid white;
+    outline: 2px solid black;
+    width: 400px;
+}
+
+/* Style the list items */
+.navbar.horizontal ul {
+    display: flex; /* Make the list items a flex container */
+    justify-content: center;
+    text-align: right; /* Center-align the items horizontally */
+}
+
+.navbar.horizontal ul li {
+    margin: 0 10px; /* Add spacing between list items */
+    text-align: center;
+    border-right: 1px solid blue;
+    padding-right: 22px;
+    padding-left: 18px;
+}
+
+/* Remove separator from the last list item */
+.navbar.horizontal ul li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+/* Style the links */
+.navbar.horizontal ul li a {
+    display: block;
+    padding: 5px 0;
+    color: blue; /* Text color of the links */
+    text-decoration: none; /* Remove underlines from links */
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+/* Change link color on hover */
+.navbar.horizontal ul li:hover {
+    background-color: gray; /* Text color on hover */
+}
+
+.navbar.horizontal ul li:hover a {
+    color: white; /* Text color on hover */
+}

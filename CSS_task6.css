@@ -1,0 +1,78 @@
+#mainHeading
+{
+    text-align: center; background-color: rgb(53, 223, 14);
+}
+
+form 
+{
+    border: 1px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] 
+{
+    width: 100%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+button /* login button */
+{
+    background-color: #04AA6D; /* color of login button */
+    color: white;/* color of login text */
+    padding: 14px 20px; /*padding of login button */
+    margin: 8px 0; /* space between the login button and form */
+    border: none; /* border of login button */
+    cursor: pointer; /* mouse changing upon login button */
+    width: 100%;
+}
+  
+button:hover /* login button */
+{
+    opacity: 0.8;
+}
+  
+.cancelbtn 
+{
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+  
+.imgcontainer 
+{
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+  
+img.avatar 
+{
+    width: 20%;
+    border-radius: 50%;
+}
+  
+.container 
+{
+    padding: 16px;
+}
+  
+span.psw 
+{
+    float: right;
+    padding-top: 16px;
+}
+  
+@media screen and (max-width: 300px) 
+{
+    span.psw 
+    {
+      display: block;
+      float: none;
+    }
+    .cancelbtn 
+    {
+      width: 100%;
+    }
+}

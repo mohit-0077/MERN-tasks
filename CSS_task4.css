@@ -1,0 +1,40 @@
+#mainHeading
+{
+    text-align: center; background-color: rgb(53, 223, 14);
+}
+
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+  
+#mySidenav a:hover {
+    left: 0;
+}
+  
+#about {
+    top: 85px;
+    background-color: #04AA6D;
+}
+  
+#blog {
+    top: 145px;
+    background-color: #2196F3;
+}
+  
+#projects {
+    top: 205px;
+    background-color: #f44336;
+}
+  
+#contact {
+    top: 265px;
+    background-color: #555
+}

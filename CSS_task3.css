@@ -1,0 +1,22 @@
+#mainHeading
+{
+    text-align: center; background-color: rgb(53, 223, 14);
+}
+table{
+    border:1px solid grey;
+    border-collapse: collapse;
+    width: 100%;
+}
+td{
+    
+    text-align: left;
+    padding: 8px;
+}
+th{
+    text-align: left;
+    padding: 8px;
+    background-color: #04A96D;
+}
+tr:nth-child(even){
+    background-color:lightgrey;
+}
