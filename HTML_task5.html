@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Task-5</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        div {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 95%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        th {
+            text-align: center;
+            width: 20%;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        center {
+            display: block;
+            text-align: center;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; background-color: aquamarine;">HTML Task-5</h1>
+    <div>
+        <h1 style="color: blue; text-align: center;">Registration Form</h1>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" name="first_name"></td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td><input type="text" name="last_name"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <th>Re-enter Password</th>
+                <td><input type="password" name="re_enter_password"></td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <hr />
+                    <input type="radio" name="gender" value="female"> Female
+                </td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td><input type="number" name="age"></td>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <td><input type="tel" name="phone_number"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><textarea style="height: 100px;" name="address"></textarea></td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td><input type="text" name="state"></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>
+                    <select id="country" name="country" style="width: 300px;"></select>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+                    <script>
+                        $(document).ready(function () {
+                            $('#country').select2({
+                                placeholder: 'Choose your country',
+                                allowClear: true,
+                                ajax: {
+                                    url: 'https://restcountries.com/v3.1/all',
+                                    dataType: 'json',
+                                    delay: 250,
+                                    processResults: function (data) {
+                                        data.sort((a, b) => a.name.common.localeCompare(b.name.common)); // Sort alphabetically
+                                        return {
+                                            results: data.map(function (country) {
+                                                return {
+                                                    id: country.cca2,
+                                                    text: country.name.common
+                                                };
+                                            })
+                                        };
+                                    },
+                                    cache: true
+                                }
+                            });
+                        });
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <th>Languages known</th>
+                <td>
+                    <input type="checkbox" name="languages[]" value="english"> English
+                    <input type="checkbox" name="languages[]" value="kannada"> Kannada
+                    <input type="checkbox" name="languages[]" value="hindi"> Hindi
+                    <input type="checkbox" name="languages[]" value="telugu"> Telugu
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" name="declaration"> Hereby I declare all the given details are
+                    true</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right;">Log in to <a href="https://ethnus.com/"
+                        target="_blank">Ethnus</a> website</td>
+            </tr>
+        </table>
+        <p>
+            <center><input type="submit" value="Register"></center>
+
+        </p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Task-4</title>
+</head>
+<style>
+    table tr td {
+        border: solid 1px white;
+        width: 60%;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('arrow.jpg');
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
+    select option {
+        background-color: #fff;
+    }
+</style>
+
+<body>
+    <h1 style="text-align: center; background-color: aquamarine;">HTML Task-4</h1>
+    <table>
+        <tr>
+            <td>Full Name:</td>
+            <td><input type="text" placeholder="Full Name"></td>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" placeholder="Username"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" placeholder="Password"></td>
+        </tr>
+        <tr>
+            <td>Re Password:</td>
+            <td><input type="password" placeholder="Re Password"></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><input type="text" placeholder="Address"></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input type="number" placeholder="Age"></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <select name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" name="save" id="save" value="Save"></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
